@@ -15,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/server', function () {
-    dd($_SERVER);
-    // return view('welcome');
-})->name('server');
+// Route::get('/server', function () {
+//     dd($_SERVER);
+//     // return view('welcome');
+// })->name('server');
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 

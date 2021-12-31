@@ -12,35 +12,35 @@ use Illuminate\Database\Seeder;
 class EcartSeeder extends Seeder
 {
     /** Products Fruit Images */
-    public const BASE_PRODUCT_IMAGE_APPLE = 'images/fruits/apple.png';
-    public const BASE_PRODUCT_IMAGE_BANANA = 'images/fruits/banana.png';
-    public const BASE_PRODUCT_IMAGE_GRAPES = 'images/fruits/grapes.png';
-    public const BASE_PRODUCT_IMAGE_MANGO = 'images/fruits/mango.png';
-    public const BASE_PRODUCT_IMAGE_ORANGES = 'images/fruits/orange.png';
+    public const BASE_PRODUCT_IMAGE_APPLE = 'public/images/fruits/apple.png';
+    public const BASE_PRODUCT_IMAGE_BANANA = 'public/images/fruits/banana.png';
+    public const BASE_PRODUCT_IMAGE_GRAPES = 'public/images/fruits/grapes.png';
+    public const BASE_PRODUCT_IMAGE_MANGO = 'public/images/fruits/mango.png';
+    public const BASE_PRODUCT_IMAGE_ORANGES = 'public/images/fruits/orange.png';
 
-    /** Products COOKING Oils Images **/
+    /** Products COOKING Oils public/Images **/
 
-    public const BASE_PRODUCT_IMAGE_PALM = 'images/oil/palm.png';
-    public const BASE_PRODUCT_IMAGE_ALMOND = 'images/oil/almond.png';
-    public const BASE_PRODUCT_IMAGE_SOYA = 'images/oil/soya.png';
-    public const BASE_PRODUCT_IMAGE_COCONUT = 'images/oil/coconut.png';
-    public const BASE_PRODUCT_IMAGE_OLIVE = 'images/oil/olive.png';
+    public const BASE_PRODUCT_IMAGE_PALM = 'public/images/oil/palm.png';
+    public const BASE_PRODUCT_IMAGE_ALMOND = 'public/images/oil/almond.png';
+    public const BASE_PRODUCT_IMAGE_SOYA = 'public/images/oil/soya.png';
+    public const BASE_PRODUCT_IMAGE_COCONUT = 'public/images/oil/coconut.png';
+    public const BASE_PRODUCT_IMAGE_OLIVE = 'public/images/oil/olive.png';
 
     /** Categories */
 
-    public const BASE_FRESH_FRUIT = 'images/categories_images/fruit.png';
-    public const BASE_COOKING_OIL = 'images/categories_images/oil.png';
-    public const BASE_BEVERAGE = 'images/categories_images/beverages.png';
-    public const BASE_BAKERY = 'images/categories_images/bakery.png';
-    public const BASE_DAIRY = 'images/categories_images/dairy.png';
+    public const BASE_FRESH_FRUIT = 'public/images/categories_images/fruit.png';
+    public const BASE_COOKING_OIL = 'public/images/categories_images/oil.png';
+    public const BASE_BEVERAGE = 'public/images/categories_images/beverages.png';
+    public const BASE_BAKERY = 'public/images/categories_images/bakery.png';
+    public const BASE_DAIRY = 'public/images/categories_images/dairy.png';
 
 
     /** Banner */
-    public const BASE_BANNER_1 = 'images/banner/B8.jpg';
-    public const BASE_BANNER_2 = 'images/banner/B3.jpg';
-    public const BASE_BANNER_3 = 'images/banner/B4.jpg';
-    public const BASE_BANNER_4 = 'images/banner/B6.jpg';
-    public const BASE_BANNER_5 = 'images/banner/B1.jpg';
+    public const BASE_BANNER_1 = 'public/images/banner/B8.jpg';
+    public const BASE_BANNER_2 = 'public/images/banner/B3.jpg';
+    public const BASE_BANNER_3 = 'public/images/banner/B4.jpg';
+    public const BASE_BANNER_4 = 'public/images/banner/B6.jpg';
+    public const BASE_BANNER_5 = 'public/images/banner/B1.jpg';
 
     /**
      * Run the database seeds.

@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        dd($_SERVER);
+        // dd($_SERVER);
         $products = Product::all();
 
         return view('product.index',compact('products'));
@@ -43,7 +43,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
         try {
             $this->validate(
                 $request,
@@ -83,7 +82,6 @@ class ProductController extends Controller
             }
         );
 
-        // Product::create($input);
         return redirect()->route('product.index')->with('success','Product created successfully !');
     }
 
@@ -111,7 +109,6 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $categories = Category::all();
-        // dd($categories);
         return view('product.edit',compact('product','categories'));
     }
 

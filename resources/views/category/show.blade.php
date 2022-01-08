@@ -33,7 +33,6 @@
                                     <td><img src="{{ $product->image }}" alt=""></td>
                                     <td><a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a></td>
                                     <td class="text-center">
-                                        {{-- <a href="{{ route('category.show', $category->id) }}" class="btn btn-warning btn-sm">Show</a> --}}
                                         <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                         <form action=" {{ route('product.destroy', $product->id) }}" method="post"
                                             style="display: inline-block">

@@ -22,8 +22,13 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Product Description</label>
-                        <textarea name="description" class="form-control" rows="4"></textarea>
+                        <textarea name="description" class="form-control ckeditor" rows="4"></textarea>
                     </div>
+
+                    {{-- <div class="form-group">
+                        <label for="description">Product Description</label>
+                        <textarea class="form-control" name="description" id="summernote"></textarea>
+                    </div> --}}
 
                     <div class="form-group">
                         <input type="file" name="image" class="form-control">
@@ -42,12 +47,22 @@
                             @endforeach
                             </select>
                     </div>
-                    
-
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                 </form>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ckeditor').ckeditor();
+        });
+        // $(document).ready(function () {
+        //     $('#summernote').summernote({
+        //     height: 400});
+        // });
+
+
+
+    </script>
 @endsection

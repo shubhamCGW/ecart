@@ -41,7 +41,13 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Product Description</label>
-                        <textarea name="description" class="form-control" rows="4">{{ $product->description }}</textarea>
+                        <div class="form-group">
+                            <label for="description">Product Description</label>
+                            <textarea name="description" class="form-control ckeditor" rows="4">
+                                {{ $product->description }}
+                            </textarea>
+                        </div>
+                        {{-- <textarea name="description" class="form-control" rows="4"></textarea> --}}
                         @error('description')
                         <span class="invalid-feedback"  role="alert">
                         <strong>{{ $message }}</strong>
@@ -90,5 +96,18 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ckeditor').ckeditor();
+        });
+        // $(document).ready(function () {
+        //     $('#summernote').summernote({
+        //     height: 400});
+        // });
+
+
+
+    </script>
 
 @endsection

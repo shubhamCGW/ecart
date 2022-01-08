@@ -61,15 +61,19 @@
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->price }}₹</td>
                                         <td>{{ $product->sub_desc }}</td>
-                                        <td>{{ $product->description }}</td>
+                                        {{-- <td>{{ substr(strip_tags($product->description), 0, 350) }}{{ strlen(strip_tags($product->description)) > 350 ? '...' : "" }} --}}
+                                            {{-- <a href="#" >Read More</a></td> --}}
+                                        {{-- {!! \Illuminate\Support\Str::markdown($product->description) !!} --}}
+                                        <td>{{Str::limit( $product->description, 50)}}</td>
                                         <td>{{ $product->Category->name }}</td>
                                         <td class="text-center">
-                                            <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary btn-sm"><i class="mdi mdi-pencil mx-0"></i></a>
+                                            <a href="{{ route('product.show', $product->id) }}" class="btn btn-warning btn-sm"> <i class="mdi mdi-eye mx-0"></i> </a>
                                             <form action=" {{ route('product.destroy', $product->id) }}" method="post"
                                                 style="display: inline-block">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="btn btn-danger btn-sm" type=" submit">Delete</button>
+                                                <button class="btn btn-danger btn-sm" type=" submit"><i class="mdi mdi-delete mx-0"></i></button>
                                                 </form>
                                         </td>
                                     </tr>

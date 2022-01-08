@@ -11,6 +11,10 @@ use Illuminate\Validation\ValidationException;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // dd($_SERVER);
+
         $products = Product::all();
 
         return view('product.index',compact('products'));
@@ -55,7 +59,6 @@ class ProductController extends Controller
                 ]
             );
         } catch (ValidationException $e) {
-            dd($e);
             return Redirect::back()
                 ->withErrors($e->validator->getMessageBag()->toArray())
                 ->withInput();
